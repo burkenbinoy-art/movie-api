@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 My Movie Collection</h1>
+        
+        <div class="form-section">
+            <h2>Add New Movie</h2>
+            <input type="text" id="title" placeholder="Movie Title">
+            <input type="number" id="rating" placeholder="Rating (0-10)" min="0" max="10">
+            <button onclick="addMovie()">Add Movie</button>
+        </div>
+
+        <div class="filter-section">
+            <input type="number" id="filterRating" placeholder="Filter by rating">
+            <button onclick="filterMovies()">Filter</button>
+            <button onclick="getAllMovies()">Show All</button>
+        </div>
+
+        <div id="movies" class="movies-list"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
