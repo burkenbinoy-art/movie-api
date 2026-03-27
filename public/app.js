@@ -1,7 +1,10 @@
 // Replace this with your Render backend URL after deployment
 // For local development: 'http://localhost:3000'
 // For production: 'https://movie-api-xyz123.onrender.com'
-const API_URL = 'http://localhost:3000';
+const API_URL =
+  window.location.hostname === 'localhost'
+    ? 'http://localhost:3000'
+    : window.location.origin;
 
 async function getAllMovies() {
     try {
